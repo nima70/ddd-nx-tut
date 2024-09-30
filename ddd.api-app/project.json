@@ -1,0 +1,26 @@
+{
+  "name": "ddd.api-app",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "ddd.api-app/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "ddd.api-app:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "ddd.api-app:build:development"
+        },
+        "production": {
+          "buildTarget": "ddd.api-app:build:production"
+        }
+      }
+    }
+  }
+}

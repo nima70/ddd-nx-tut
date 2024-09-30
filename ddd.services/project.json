@@ -1,0 +1,19 @@
+{
+  "name": "ddd.services",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "ddd.services/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/ddd.services",
+        "main": "ddd.services/src/index.ts",
+        "tsConfig": "ddd.services/tsconfig.lib.json",
+        "assets": ["ddd.services/*.md"]
+      }
+    }
+  }
+}

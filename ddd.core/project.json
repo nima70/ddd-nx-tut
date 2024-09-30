@@ -1,0 +1,19 @@
+{
+  "name": "ddd.core",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "ddd.core/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/ddd.core",
+        "main": "ddd.core/src/index.ts",
+        "tsConfig": "ddd.core/tsconfig.lib.json",
+        "assets": ["ddd.core/*.md"]
+      }
+    }
+  }
+}
